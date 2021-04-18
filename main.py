@@ -9,6 +9,7 @@ import nacl
 import ffmpeg
 import os
 import sys
+print("test")
 intents = discord.Intents.default()
 intents.members = True
 intents.presences = True
