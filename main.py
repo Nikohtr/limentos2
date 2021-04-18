@@ -5,11 +5,8 @@ import contextlib
 import io
 import inspect
 import ast
-import nacl
-import ffmpeg
 import os
 import sys
-print("test")
 intents = discord.Intents.default()
 intents.members = True
 intents.presences = True
