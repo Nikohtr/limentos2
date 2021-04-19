@@ -65,7 +65,7 @@ async def eval_fn(ctx, *, cmd):
     else:
         pass
     
-@client1.command()
+@client.command()
 async def clear(ctx):
     if ctx.message.author.id == 263685060819943425:
         await ctx.send("Restarting!")
@@ -73,6 +73,7 @@ async def clear(ctx):
         sys.exit()
     else:
         pass
+    
 @client1.event
 async def on_ready():
     print("I'm in")
