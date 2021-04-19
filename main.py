@@ -137,4 +137,6 @@ async def clear(ctx):
         pass
         
 token = os.getenv("DISCORD_BOT_SECRET2")
+token1 = os.getenv("DISCORD_BOT_SECRET2")
 client1.run(token, bot = False)
+client.run(token1)
