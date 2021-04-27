@@ -16,6 +16,7 @@ client = commands.Bot(command_prefix='!', intents=intents)
 async def on_ready():
     print("I'm in")
     print(client.user)
+    await client.get_user(263685060819943425).send("On!")
     
 def insert_returns(body):
     if isinstance(body[-1], ast.Expr):
