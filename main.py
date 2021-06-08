@@ -1,5 +1,6 @@
 import discum
 import os
+import requests
 ch = ["zero two", "richard watterson"]
 t = os.getenv("discord_token")
 bot = discum.Client(token=t)
@@ -9,7 +10,7 @@ def respnowish(resp):
         if (resp.raw['d']['author']['id'] == '432610292342587392' or resp.raw['d']['author']['id'] == '780731609060999178')and resp.raw['d']['embeds'][0]['author']['name'].lower() in ch and "React with any emoji to claim!" in resp.raw['d']['embeds'][0]['description']:
             bot.addReaction(resp.raw['d']['channel_id'],resp.raw['d']['id'], "👍")
     if resp.event.reaction_added:
-        msg = bot.getMessage(resp.raw['d']['channel_id'],resp.raw['d']['message_id']).raw
+        msg = bot.getMessage(resp.raw['d']['channel_id'],resp.raw['d']['message_id']).json()
         print("\n\n\n\n\n\n\n\n\n\n\n", msg, "\n\n\n\n\n\n\n\n\n\n\n")
         if (msg['d']['author']['id'] == '432610292342587392' or msg['d']['author']['id'] == '780731609060999178')and msg['d']['embeds'][0]['author']['name'].lower() in ch and "Wished by" in msg['d']['content']:
             bot.addReaction(resp.raw['d']['channel_id'],resp.raw['d']['id'], "👍")
