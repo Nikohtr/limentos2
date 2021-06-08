@@ -11,7 +11,7 @@ def respnowish(resp):
 def respwish(resp):
     if resp.event.reaction_added:
         msg = bot.getMessage(resp.raw['d']['channel_id'],resp.raw['d']['message_id'])
-        print(msg, msg.raw)
+        print("\n\n\n\n\n\n\n\n\n\n\n"msg, msg.raw, "\n\n\n\n\n\n\n\n\n\n\n")
         if (msg['d']['author']['id'] == '432610292342587392' or msg['d']['author']['id'] == '780731609060999178')and msg['d']['embeds'][0]['author']['name'].lower() in ch and "Wished by" in msg['d']['content']:
             bot.addReaction(resp.raw['d']['channel_id'],resp.raw['d']['id'], "👍")
 bot.gateway.run()
